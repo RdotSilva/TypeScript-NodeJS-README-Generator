@@ -26,4 +26,16 @@ export const questions = [
       return true;
     },
   },
+  {
+    type: "input",
+    message: "Installation",
+    name: "description",
+    default: "Project Installation",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("Project Installation Required");
+      }
+      return true;
+    },
+  },
 ];
