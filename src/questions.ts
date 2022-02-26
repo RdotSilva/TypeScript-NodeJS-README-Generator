@@ -29,7 +29,7 @@ export const questions = [
   {
     type: "input",
     message: "Installation",
-    name: "description",
+    name: "installation",
     default: "Project Installation",
     validate: function (answer) {
       if (answer.length < 1) {
