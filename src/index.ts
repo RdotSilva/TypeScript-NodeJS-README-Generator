@@ -1,5 +1,7 @@
 // TODO: Add npm package to read from command line
 const inquirer = require("inquirer");
+const fs = require("fs");
+const path = require("path");
 
 // TODO: Create a list of questions to pass into that package
 // TODO: Should have validation for questions (some can be optional)
@@ -13,13 +15,12 @@ import { createMarkdown } from "../utils/createMarkdown";
 // TODO: Pass in the answers into generateMarkdown utility
 // TODO: Get the returned markdown from generateMarkdown and write that to file (README.md)
 
-const markdown = createMarkdown("Cool");
-
-console.log(markdown);
-
 async function main() {
   try {
     const userResponses = await inquirer.prompt(questions);
+    const markdown = createMarkdown(userResponses);
+    const readmeOutputPath = path.join(__dirname, "../output/README.md");
+    fs.writeFileSync(readmeOutputPath, markdown);
   } catch (error) {
     console.log(error);
     main();
