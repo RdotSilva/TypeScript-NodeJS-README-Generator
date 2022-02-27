@@ -1,14 +1,10 @@
+import { javaScriptInstallation } from "./../templates/installation";
+
 interface markdownData {
   title: string;
   description: string;
   installation: string;
 }
-
-const javaScriptInstallation = `1. Install dependencies in main project folder
-\`\`\`
-npm install
-\`\`\`
-`;
 
 /**
  * Create markdown from data
@@ -23,6 +19,6 @@ export const createMarkdown = ({
   return `# ${title}
   # ${description}
   ## Installation
-  ${javaScriptInstallation}
+  ${installation === "JavaScript" ? javaScriptInstallation : "Other"}
   `;
 };
