@@ -27,15 +27,9 @@ export const questions = [
     },
   },
   {
-    type: "input",
+    type: "list",
     message: "Installation",
     name: "installation",
-    default: "Project Installation",
-    validate: function (answer) {
-      if (answer.length < 1) {
-        return console.log("Project Installation Required");
-      }
-      return true;
-    },
+    choices: ["JavaScript", "Python", "Java", "Other"],
   },
 ];
