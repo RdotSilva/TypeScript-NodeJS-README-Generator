@@ -3,3 +3,6 @@ export const javaScriptInstallation = `1. Install dependencies in main project f
 npm install
 \`\`\`
 `;
+
+export const pythonInstallation = `TODO: Add Python instructions
+`;
