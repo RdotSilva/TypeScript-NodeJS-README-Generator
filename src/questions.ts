@@ -32,4 +32,16 @@ export const questions = [
     name: "installation",
     choices: ["JavaScript", "Python", "Java", "Other"],
   },
+  {
+    type: "input",
+    message: "Project Technologies",
+    name: "technologies",
+    default: "Project Technologies",
+    validate: function (answer) {
+      if (answer.length < 1) {
+        return console.log("Project Technologies Required");
+      }
+      return true;
+    },
+  },
 ];
