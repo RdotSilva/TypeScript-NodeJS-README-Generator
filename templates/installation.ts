@@ -15,3 +15,9 @@ export const mavenInstallation = `1. Install dependencies in main project folder
 mvn install
 \`\`\`
 `;
+
+export const gradleInstallation = `1. Install dependencies in main project folder
+\`\`\`
+./gradlew build --refresh-dependencies
+\`\`\`
+`;
