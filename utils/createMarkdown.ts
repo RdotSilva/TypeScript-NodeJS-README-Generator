@@ -1,10 +1,23 @@
-import { javaScriptInstallation } from "./../templates/installation";
+import {
+  javaScriptInstallation,
+  pythonInstallation,
+  mavenInstallation,
+  gradleInstallation,
+} from "./../templates/installation";
 
 interface markdownData {
   title: string;
   description: string;
   installation: string;
 }
+
+const createInstallationMarkdown = (template: String) => {
+  if (template === "JavaScript") return javaScriptInstallation;
+  if (template === "Python") return pythonInstallation;
+  if (template === "Maven") return mavenInstallation;
+  if (template === "Gradle") return gradleInstallation;
+  else return "Other";
+};
 
 /**
  * Create markdown from data
@@ -19,6 +32,6 @@ export const createMarkdown = ({
   return `# ${title}
   # ${description}
   ## Installation
-  ${installation === "JavaScript" ? javaScriptInstallation : "Other"}
+  ${createInstallationMarkdown(installation)}
   `;
 };
