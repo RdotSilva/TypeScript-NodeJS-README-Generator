@@ -9,3 +9,9 @@ export const pythonInstallation = `1. Install dependencies in main project folde
 pip install -r requirements.txt
 \`\`\`
 `;
+
+export const mavenInstallation = `1. Install dependencies in main project folder
+\`\`\`
+mvn install
+\`\`\`
+`;
