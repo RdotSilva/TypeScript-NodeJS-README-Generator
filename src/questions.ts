@@ -30,7 +30,7 @@ export const questions = [
     type: "list",
     message: "Installation",
     name: "installation",
-    choices: ["JavaScript", "Python", "Java", "Other"],
+    choices: ["JavaScript", "Python", "Maven", "Gradle", "Other"],
   },
   {
     type: "input",
