@@ -19,6 +19,13 @@ const createInstallationMarkdown = (template: String) => {
   else return "Other";
 };
 
+const createScreenshotMarkdown = () => {
+  return `
+  ## Screenshots
+  ![Coming Soon](https://upload.wikimedia.org/wikipedia/commons/8/80/Comingsoon.png "Coming Soon")
+  `;
+};
+
 /**
  * Create markdown from data
  * @param data The data you want to use to create markdown
@@ -30,8 +37,12 @@ export const createMarkdown = ({
   installation,
 }: markdownData): String => {
   return `# ${title}
-  # ${description}
-  ## Installation
-  ${createInstallationMarkdown(installation)}
-  `;
+---
+# ${description}
+---
+## Installation
+${createInstallationMarkdown(installation)}
+---
+${createScreenshotMarkdown()}
+`;
 };
