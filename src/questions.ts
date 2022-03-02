@@ -33,15 +33,9 @@ export const questions = [
     choices: ["JavaScript", "Python", "Maven", "Gradle", "Other"],
   },
   {
-    type: "input",
-    message: "Project Technologies",
-    name: "technologies",
-    default: "Project Technologies",
-    validate: function (answer) {
-      if (answer.length < 1) {
-        return console.log("Project Technologies Required");
-      }
-      return true;
-    },
+    type: "confirm",
+    message: "Include Screenshots",
+    name: "screenshots",
+    default: true,
   },
 ];
