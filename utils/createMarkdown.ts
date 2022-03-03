@@ -12,7 +12,7 @@ interface markdownData {
   screenshots: boolean;
 }
 
-const createInstallationMarkdown = (template: String) => {
+const createInstallationMarkdown = (template: string) => {
   if (template === "JavaScript") return javaScriptInstallation;
   if (template === "Python") return pythonInstallation;
   if (template === "Maven") return mavenInstallation;
@@ -27,11 +27,20 @@ const createScreenshotMarkdown = () => {
   `;
 };
 
-const createLicenseMarkdown = () => {
-  return `
+const createLicenseMarkdown = (licenseType: string) => {
+  if (licenseType === "Mit") {
+    return `
   ## License
   This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
   `;
+  } else if (licenseType === "Other") {
+    return `
+    ## License
+    This project is licensed under the Other License - see the [LICENSE.md](LICENSE.md) file for details
+    `;
+  } else {
+    return ``;
+  }
 };
 
 /**
