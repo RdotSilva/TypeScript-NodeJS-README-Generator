@@ -9,6 +9,7 @@ interface markdownData {
   title: string;
   description: string;
   installation: string;
+  screenshots: boolean;
 }
 
 const createInstallationMarkdown = (template: String) => {
