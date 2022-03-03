@@ -27,6 +27,13 @@ const createScreenshotMarkdown = () => {
   `;
 };
 
+const createLicenseMarkdown = () => {
+  return `
+  ## License
+  This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+  `;
+};
+
 /**
  * Create markdown from data
  * @param data The data you want to use to create markdown
