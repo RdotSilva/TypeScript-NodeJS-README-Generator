@@ -35,6 +35,7 @@ export const createMarkdown = ({
   title,
   description,
   installation,
+  screenshots,
 }: markdownData): String => {
   return `# ${title}
 ---
@@ -43,6 +44,6 @@ export const createMarkdown = ({
 ## Installation
 ${createInstallationMarkdown(installation)}
 ---
-${createScreenshotMarkdown()}
+${screenshots ? createScreenshotMarkdown() : ``}
 `;
 };
