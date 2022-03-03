@@ -12,6 +12,11 @@ interface markdownData {
   screenshots: boolean;
 }
 
+/**
+ * Generate markdown for installation instructions
+ * @param template The language template to use for creating instructions
+ * @returns Installation instruction markdown
+ */
 const createInstallationMarkdown = (template: string) => {
   if (template === "JavaScript") return javaScriptInstallation;
   if (template === "Python") return pythonInstallation;
