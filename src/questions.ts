@@ -39,9 +39,10 @@ export const questions = [
     default: true,
   },
   {
-    type: "confirm",
+    type: "checkbox",
     message: "Include License",
     name: "license",
-    default: false,
+    choices: ["MIT", "Other", "None"],
+    default: ["None"],
   },
 ];
