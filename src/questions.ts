@@ -38,4 +38,10 @@ export const questions = [
     name: "screenshots",
     default: true,
   },
+  {
+    type: "confirm",
+    message: "Include License",
+    name: "license",
+    default: false,
+  },
 ];
